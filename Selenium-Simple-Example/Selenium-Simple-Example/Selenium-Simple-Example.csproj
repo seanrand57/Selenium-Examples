@@ -54,16 +54,26 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
       </ItemGroup>
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="SeleniumWebSiteTests.cs" />
+    <Compile Include="001_GettingStarted\SeleniumWebSiteTests.cs" />
+    <Compile Include="002_ClickingElements\002_ClickingElements.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="003_SettingWebDriverProperties\" />
+    <Folder Include="004_WorkingWithWebElements\" />
+    <Folder Include="005_ReturningPageSource\" />
+    <Folder Include="006_TestInitializeAndCleanUp\" />
+    <Folder Include="007_Screenshot\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
